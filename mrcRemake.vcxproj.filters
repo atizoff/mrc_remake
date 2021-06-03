@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="main">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="game">
+      <UniqueIdentifier>{e2334019-7d50-4fcb-942d-b250236153e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vmt">
+      <UniqueIdentifier>{4f6ec749-5a98-41aa-b16e-5daf0bee8e8c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="dllmain.hpp">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="classes.hpp">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="define.hpp">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="call.hpp">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="vmt.hpp">
+      <Filter>vmt</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
