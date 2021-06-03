@@ -11,6 +11,8 @@ INT APIENTRY hkUpdate(ISystem* pSystem, INT iInfo, INT iPause)
 	return oUpdate(pSystem, iInfo, iPause);
 }
 
+// for using ddraw method u need create void where u set hook on isystem, and then in if (dwReason == 1) createthread
+
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD dwReason, LPVOID lpReserved)
 {
     if (dwReason == 1)
