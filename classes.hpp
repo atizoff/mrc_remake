@@ -2,8 +2,8 @@
 
 enum Cry_DATA : uintptr_t
 {
-	ssge = 0x141E62C98, // update it
-	igf = 0x14217C278   // update it
+	ssge = 0x141E62C98, 
+	igf = 0x14217C278   
 };
 
 class SSystemGlobalEnvironment
