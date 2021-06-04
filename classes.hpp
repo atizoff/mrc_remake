@@ -2,15 +2,15 @@
 
 enum Cry_DATA : uintptr_t
 {
-	ssge = 0x141E50900, // update it
-	igf = 0x142159878   // update it
+	ssge = 0x141E62C98, // update it
+	igf = 0x14217C278   // update it
 };
 
 class SSystemGlobalEnvironment
 {
 public:
-	ISystem* GetISystem() { return *(ISystem**)((uintptr_t)this + 0xE8); }
-	IEntitySystem* GetIEntitySystem() { return *(IEntitySystem**)((uintptr_t)this + 0xD8); }
+	ISystem* GetISystem() { return *(ISystem**)((uintptr_t)this + 0xF0); }
+	IEntitySystem* GetIEntitySystem() { return *(IEntitySystem**)((uintptr_t)this + 0xE0); }
 	I3DEngine* GetI3DEngine() { return *(I3DEngine**)((uintptr_t)this + 0x100); }
 
 	static SSystemGlobalEnvironment* Singleton()
