@@ -2,15 +2,16 @@
 
 enum Cry_DATA : uintptr_t
 {
-	ssge = 0x141E62C98, 
-	igf = 0x14217C278   
+	ssge = 0x141E50900,
+	igf = 0x142159878,
+	icv = 0x14217B5C8
 };
 
 class SSystemGlobalEnvironment
 {
 public:
-	ISystem* GetISystem() { return *(ISystem**)((uintptr_t)this + 0xF0); }
-	IEntitySystem* GetIEntitySystem() { return *(IEntitySystem**)((uintptr_t)this + 0xE0); }
+	ISystem* GetISystem() { return *(ISystem**)((uintptr_t)this + 0xE8); }
+	IEntitySystem* GetIEntitySystem() { return *(IEntitySystem**)((uintptr_t)this + 0xD8); }
 	I3DEngine* GetI3DEngine() { return *(I3DEngine**)((uintptr_t)this + 0x100); }
 
 	static SSystemGlobalEnvironment* Singleton()
@@ -35,6 +36,21 @@ public:
 	static IGameFramework* Singleton()
 	{
 		return *(IGameFramework**)igf;
+	}
+};
+
+class ICVar
+{
+public:
+	static ICVar* Singleton()
+	{
+		return *(ICVar**)icv;
+	}
+
+	template <class T>
+	inline VOID Set(DWORD64 offset, T value)
+	{
+		*(T*)((DWORD64)this + offset) = value;
 	}
 };
 

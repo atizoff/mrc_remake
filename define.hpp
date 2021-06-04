@@ -4,6 +4,7 @@ class SSystemGlobalEnvironment;
 class IGameFramework;
 class I3DEngine;
 class ISystem;
+class ICVar;
 
 class IActor;
 class IActorSystem;
