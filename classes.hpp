@@ -2,8 +2,8 @@
 
 enum Cry_DATA : uintptr_t
 {
-	ssge = 0x141E50900,
-	igf = 0x142159878,
+	ssge = 0x141E62C98,
+	igf = 0x14217C278,
 	icv = 0x14217B5C8
 };
 
